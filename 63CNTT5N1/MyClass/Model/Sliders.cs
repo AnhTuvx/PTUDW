@@ -15,6 +15,7 @@ namespace MyClass.Model
         public int Id { get; set; }
 
         [Required]
+
         public string Name { get; set; }
 
         public string URL { get; set; }
@@ -26,7 +27,7 @@ namespace MyClass.Model
         public string Position { get; set; }
 
         public int CreateBy { get; set; }
-
+       
         public DateTime CreateAt { get; set; }
 
         public int? UpdateBy { get; set; }
