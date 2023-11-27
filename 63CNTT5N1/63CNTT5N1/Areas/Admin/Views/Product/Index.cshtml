@@ -5,12 +5,12 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-@section header{
-    <link rel="stylesheet" href="~/Public/css/jquery.dataTables.min.css" />
+@section header {
+    <link href="~/Public/css/cdn.datatables.net_1.13.6_css_jquery.dataTables.min.css" rel="stylesheet" />
 }
 
-@section footer{
-    <script src="~/Public/js/jquery.dataTables.min.js"></script>
+@section footer {
+    <script src="~/Public/js/cdn.datatables.net_1.13.6_js_jquery.dataTables.min.js"></script>
     <script>let table = new DataTable('#myTable');</script>
 }
 
@@ -44,7 +44,7 @@
                                 <th>@Html.DisplayNameFor(model => model.Id)</th>
                                 <th>@Html.DisplayNameFor(model => model.CatId)</th>
                                 <th>@Html.DisplayNameFor(model => model.Name)</th>
-                                
+                                <th>@Html.DisplayNameFor(model => model.SupplierId)</th>
                                 <th>@Html.DisplayNameFor(model => model.Price)</th>
                                 <th>@Html.DisplayNameFor(model => model.Qty)</th>
                                 <th>@Html.DisplayNameFor(model => model.Img)</th>
@@ -59,10 +59,10 @@
                                     <td>@Html.DisplayFor(modelItem => item.Id)</td>
                                     <td>@Html.DisplayFor(modelItem => item.CatId)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                                    
+                                    <td>@Html.DisplayFor(modelItem => item.SupplierId)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Price)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Qty)</td>
-                                    <td><img src="~/Public/img/supplier/@item.Img" alt="Img" class="img-fluid" /></td>
+                                    <td><img src="~/Public/img/product/@item.Img" alt="Img" class="img-fluid" /></td>
                                     <td>
                                         @if (item.Status == 1)
                                         {

@@ -8,8 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using MyClass.Model;
 using MyClass.DAO;
-using UDW.Library;
 using System.IO;
+using UDW.Library;
 
 namespace _63CNTT5N1.Areas.Admin.Controllers
 {
@@ -117,6 +117,8 @@ namespace _63CNTT5N1.Areas.Admin.Controllers
                 TempData["message"] = new XMessage("danger", "Không tồn tại sản phẩm");
                 return RedirectToAction("Index");
             }
+            ViewBag.ListCatID = new SelectList(categoriesDAO.getList("Index"), "Id", "Name");//sai CatId - truy van tu bang Categories
+            ViewBag.ListSupID = new SelectList(suppliersDAO.getList("Index"), "Id", "Name");//sai SupplierID - truy van bang Suppliers
             return View(products);
         }
 
