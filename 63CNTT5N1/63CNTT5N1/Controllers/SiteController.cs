@@ -17,5 +17,10 @@ namespace _63CNTT5N1.Controllers
             ViewBag.choi = count;
             return View();
         }
+        public ActionResult Blog()
+        {
+            return View();
+        }
+        
+        }
     }
-}
